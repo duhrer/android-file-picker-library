@@ -5,7 +5,7 @@
     <artifactId>picker</artifactId>
     <version>1.0</version>
     <packaging>apk</packaging>
-    <name>Simple Android Sound Recorder</name>
+    <name>Android File Picker Library</name>
 
 	<developers>
 		<developer>
@@ -75,7 +75,7 @@
 		        		<license.user.email>duhrer@gmail.com</license.user.email>
 		        		<license.year>2013</license.year>
 		        	</properties>
-		            <header>src/etc/license-header.txt</header>
+		            <header>src/etc/file-picker-license-header.txt</header>
 		        </configuration>
 		    </plugin>
 		</plugins>
