@@ -29,6 +29,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.database.DataSetObserver;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,12 +90,17 @@ public class FileIconListAdapter implements ListAdapter {
 	}
 
 	private String getParentDir() {
-		if (!cwd.startsWith("/sdcard") || cwd.matches("^/sdcard/?$"))
+		if (displayParentDirectory())
 		{
-			return null;
+			return cwd.replaceFirst("/[^/]+/?$", "");
 		}
 
-		return cwd.replaceFirst("/[^/]+/?$", "");
+		return null;
+	}
+
+	private boolean displayParentDirectory() {
+		String deviceRootPath = Environment.getExternalStorageDirectory().getPath();
+		return (cwd.startsWith(deviceRootPath) && !cwd.matches("^" + deviceRootPath + "/?$"));
 	}
 
 	public int getCount() {

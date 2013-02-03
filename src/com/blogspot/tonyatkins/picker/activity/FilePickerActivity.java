@@ -86,9 +86,11 @@ public class FilePickerActivity extends Activity {
 	
 	public void setCwd(String cwd) {
 		if (cwd == null) { return; }
+
+		String cwdString = cwd.equals(Constants.HOME_DIR) ? "/" : cwd.replace(Constants.HOME_DIR, "");
 		
 		TextView cwdLabel = (TextView) findViewById(R.id.file_picker_cwd);
-		cwdLabel.setText(cwd);
+		cwdLabel.setText(cwdString);
 		cwdLabel.invalidate();
 		fileIconListAdapter.setCwd(cwd);
 		fileListView.invalidate();
