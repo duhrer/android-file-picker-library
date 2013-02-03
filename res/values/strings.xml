@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android File Picker Library</string>
+    <string name="picker_current_directory_label">Current directory:</string>
+    <string name="picker_current_directory_location">/dev/null</string>
+    <string name="picker_clear_value_button">Set to Empty</string>
+    <string name="picker_cancel_button">Cancel</string>
+</resources>
