@@ -39,8 +39,8 @@ public class FilePickerActivity extends Activity {
 	public final static String FILE_TYPE_BUNDLE = "fileType";
 	public final static String CWD_BUNDLE = "workingDir";
 	public static final int REQUEST_CODE = 567;
-	public static final String FILE_NAME_BUNDLE = "fileName";
 	public static final int FILE_SELECTED = 678;
+	public static final int NO_FILE_SELECTED = 876;
 	private ListView fileListView;
 	private FileIconListAdapter fileIconListAdapter;
 	int fileType = 0;
@@ -101,10 +101,8 @@ public class FilePickerActivity extends Activity {
 		public void onClick(View v) {
 			Intent returnedIntent = new Intent();
 			Bundle bundle = new Bundle();
-			bundle.putString(FilePickerActivity.FILE_NAME_BUNDLE, null);
-			bundle.putInt(FilePickerActivity.FILE_TYPE_BUNDLE, fileType);
 			returnedIntent.putExtras(bundle);
-			setResult(FilePickerActivity.FILE_SELECTED, returnedIntent);
+			setResult(FilePickerActivity.NO_FILE_SELECTED, returnedIntent);
 			finish();
 		}
 	}
