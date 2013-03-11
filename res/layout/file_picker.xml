@@ -58,9 +58,9 @@
 
     <TextView
         android:id="@+id/file_picker_set_to_null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:gravity="center"
         android:text="@string/picker_clear_value_button" >
     </TextView>
 
