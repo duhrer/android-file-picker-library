@@ -29,11 +29,6 @@
 		</developer>
 	</developers>
 
-	<scm>
-		<connection>scm:git:https://duhrer@bitbucket.org/duhrer/android-file-picker-library.git</connection>
-		<url>https://duhrer@bitbucket.org/duhrer/android-file-picker-library.git</url>
-	</scm>
-
 	<properties>
 		<android.api.version>7</android.api.version>
 		<android.avd.device.name>Gingerbread</android.avd.device.name>
