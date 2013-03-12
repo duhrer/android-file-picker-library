@@ -10,17 +10,29 @@
 	<description>A simple library to add a file picker to an Android project.</description>
 	<url>https://bitbucket.org/duhrer/android-file-picker-library</url>
 	<licenses>
-	    <license>
-	        <name>The FreeBSD Copyright</name>
-	        <url>http://www.freebsd.org/copyright/freebsd-license.html</url>
-	        <distribution>repo</distribution>
-	    </license>
+		<license>
+			<name>The FreeBSD Copyright</name>
+			<url>http://www.freebsd.org/copyright/freebsd-license.html</url>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
 	<scm>
-	    <url>https://bitbucket.org/duhrer/android-file-picker-library</url>
-	    <connection>scm:git:https://bitbucket.org/duhrer/android-file-picker-library</connection>
-	    <developerConnection>scm:git:https://bitbucket.org/duhrer/android-file-picker-library</developerConnection>
+		<url>https://bitbucket.org/duhrer/android-file-picker-library</url>
+		<connection>scm:git:https://bitbucket.org/duhrer/android-file-picker-library</connection>
+		<developerConnection>scm:git:https://bitbucket.org/duhrer/android-file-picker-library</developerConnection>
 	</scm>
+	<distributionManagement>
+		<repository>
+			<id>sonatype-nexus-staging</id>
+			<name>Sonatype Nexus Staging</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+		<snapshotRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<developers>
 		<developer>
 			<id>duhrer</id>
