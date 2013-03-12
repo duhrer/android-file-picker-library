@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.blogspot.tonyatkins</groupId>
 	<artifactId>picker</artifactId>
-	<version>1.0.1</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>apklib</packaging>
 	<name>Android File Picker Library</name>
 	<description>A simple library to add a file picker to an Android project.</description>
