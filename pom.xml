@@ -18,8 +18,8 @@
 	</licenses>
 	<scm>
 	    <url>https://bitbucket.org/duhrer/android-file-picker-library</url>
-	    <connection>scm:hg:https://bitbucket.org/duhrer/android-file-picker-library</connection>
-	    <developerConnection>scm:hg:https://bitbucket.org/duhrer/android-file-picker-library</developerConnection>
+	    <connection>scm:git:https://bitbucket.org/duhrer/android-file-picker-library</connection>
+	    <developerConnection>scm:git:https://bitbucket.org/duhrer/android-file-picker-library</developerConnection>
 	</scm>
 	<developers>
 		<developer>
@@ -30,7 +30,7 @@
 	</developers>
 
 	<properties>
-		<android.api.version>7</android.api.version>
+		<android.api.version>11</android.api.version>
 		<android.avd.device.name>Gingerbread</android.avd.device.name>
 		<android.version>2.1_r1</android.version>
 	</properties>
