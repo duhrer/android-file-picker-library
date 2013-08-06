@@ -133,8 +133,14 @@ public class FileIconListAdapter implements ListAdapter {
 
 		// return an icon with the right name and image type
 		int iconResource = R.drawable.file;
-		if (file.isDirectory())
-			iconResource = R.drawable.folder;
+		if (file.isDirectory()) {
+            if (file instanceof LabeledFile && ((LabeledFile) file).getLabel().equals("Parent Directory")) {
+                iconResource = R.drawable.up;
+            }
+            else {
+                iconResource = R.drawable.folder;
+            }
+        }
 
 		LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View view = inflater.inflate(R.layout.file_picker_row, parent, false);
