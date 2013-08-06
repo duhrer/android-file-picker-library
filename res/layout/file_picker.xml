@@ -30,7 +30,8 @@
 -->
 <!-- FIXME: Migrate all text to strings.xml for internationalization. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/file_picker"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/file_picker"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center"
@@ -38,18 +39,13 @@
     android:padding="20dp" >
 
     <TextView
-        android:id="@+id/file_picker_cwd_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/picker_current_directory_label"
-        android:textSize="20sp" />
-
-    <TextView
         android:id="@+id/file_picker_cwd"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/picker_current_directory_location"
-        android:textSize="15sp" />
+        android:textSize="25sp"
+        android:padding="20px"
+        android:gravity="center"/>
 
     <ListView
         android:id="@+id/file_picker_list"
@@ -58,16 +54,9 @@
         android:layout_weight="1"
         android:background="@drawable/darkgrayoutline"
         android:numColumns="4"
-        android:padding="10dp" >
+        android:padding="10dp"
+        tools:listitem="@layout/file_picker_row">
     </ListView>
-
-    <TextView
-        android:id="@+id/file_picker_set_to_null"
-        android:layout_width="match_parent"
-        android:layout_height="50dip"
-        android:gravity="center"
-        android:text="@string/picker_clear_value_button" >
-    </TextView>
 
     <Button
         android:id="@+id/file_picker_cancel"

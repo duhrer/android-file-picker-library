@@ -74,10 +74,6 @@ public class FilePickerActivity extends Activity {
 		// We have to do this after the fileIconListAdapter is created
 		setCwd(workingDir);
 		
-		// Wire up a link to clear the current value
-		TextView clearValue = (TextView) findViewById(R.id.file_picker_set_to_null);
-		clearValue.setOnClickListener(new NullPickedListener());
-		
 		// wire up the cancel button
 		Button cancelButton = (Button) findViewById(R.id.file_picker_cancel);
 		cancelButton.setOnClickListener(new ActivityCancelListener());
@@ -92,23 +88,14 @@ public class FilePickerActivity extends Activity {
 	public void setCwd(String cwd) {
 		if (cwd == null) { return; }
 
-		String cwdString = cwd.equals(Constants.HOME_DIR) ? "/" : cwd.replace(Constants.HOME_DIR, "");
+		String cwdString = cwd.equals(Constants.HOME_DIR) ? "Home" : cwd.replace(Constants.HOME_DIR, "");
+        String lastDir = cwdString.substring(cwdString.lastIndexOf("/") + 1);
 		
 		TextView cwdLabel = (TextView) findViewById(R.id.file_picker_cwd);
-		cwdLabel.setText(cwdString);
+		cwdLabel.setText(lastDir);
 		cwdLabel.invalidate();
 		fileIconListAdapter.setCwd(cwd);
 		fileListView.invalidate();
 		fileListView.invalidateViews();
-	}
-	
-	private class NullPickedListener implements OnClickListener {
-		public void onClick(View v) {
-			Intent returnedIntent = new Intent();
-			Bundle bundle = new Bundle();
-			returnedIntent.putExtras(bundle);
-			setResult(FilePickerActivity.NO_FILE_SELECTED, returnedIntent);
-			finish();
-		}
 	}
 }
