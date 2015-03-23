@@ -45,7 +45,7 @@ You will need to define the (external) activity in your `AndroidManifest.xml` fi
         </intent-filter>
     </activity>
 
-Note that you can choose the label and icon, in this example I have picked up the standard icon and app name for my existing project.  thus, when a user presses the "record" button, they simply see that my application can handle the recording for them.  They never have to know that they're using this library at all... :)
+Note that you can choose the label and icon, in this example I have picked up the standard icon and app name for my existing project.  thus, when a user presses the "file picker" button, they simply see that the application can handle the recording for them.  They never have to know that they're using this library at all... :)
 
 The comment pointing to the source URL isn't strictly necessary, but you should of course make it clear you're using the library (it's part of the license, after all).
 
