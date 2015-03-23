@@ -4,7 +4,7 @@ This project provides a simple file picker for apps that work with files.  It is
 
 # Using the file picker in your project
 
-To use the recorder in your project, you must do two things:
+To use the file picker in your project, you must do two things:
 
 1. Include it in your Gradle dependencies.
 2. Define the activity in your AndroidManifest.xml
